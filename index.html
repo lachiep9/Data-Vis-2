@@ -23,15 +23,15 @@
   var spec3 = "js/bump_chart.vg.json";
   var spec4 = "js/bubble_chart.vg.json";
 
-  vegaEmbed('#symbol_map', spec2).then(function(result) {
+  vegaEmbed('#symbol_map', spec2, { "actions": false }).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  vegaEmbed('#bump_chart', spec3).then(function(result) {
+  vegaEmbed('#bump_chart', spec3, { "actions": false }).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 
-  vegaEmbed('#bubble_chart', spec4).then(function(result) {
+  vegaEmbed('#bubble_chart', spec4, { "actions": false }).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
