@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Billboard Ranking",
+  "height": 500,
+  "width": 600,
+  "data": {"url": "https://raw.githubusercontent.com/lachiep9/3179/main/Billboard%20Rankings.csv"},
+  "transform": [{
+    "sort": [{"field": "Ranking", "order": "ascending"}],
+    "window": [{
+      "op": "rank",
+      "as": "rank"
+    }]
+  }],
+  "mark": {"type": "line", "orient": "vertical","point":true},
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal"},
+    "y": {"field": "Ranking", 
+      "type": "quantitative", 
+      "scale": {
+        "domain": [100, 0]
+      }
+    },
+    "color": {
+      "field": "Artist", "type": "nominal",
+      "scale": {
+        "domain": ["Taylor Swift","Chris Brown","Eminem","Maroon 5","Drake"]
+      }
+    },
+    "tooltip":[
+      {"field": "Year", "type": "temporal", "timeUnit": "year", "title": "Year"},
+      {"field": "Artist"},
+      {"field": "Ranking"}
+    ]
+  }
+}
