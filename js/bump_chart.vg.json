@@ -3,7 +3,7 @@
   "title": "Billboard Ranking",
   "height": 500,
   "width": 600,
-  "data": {"url": "https://raw.githubusercontent.com/lachiep9/3179/main/Billboard%20Rankings.csv"},
+  "data": {"url": "https://raw.githubusercontent.com/lachiep9/Data-Vis-2/main/data/Billboard%20Rankings.csv"},
   "transform": [{
     "sort": [{"field": "Ranking", "order": "ascending"}],
     "window": [{
