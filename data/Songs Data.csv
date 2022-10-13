@@ -1,4 +1,4 @@
-﻿artist,song,duration_ms,Length (Minutes:Seconds),explicit,year,popularity,danceability,energy,key,loudness,mode,speechiness,acousticness,instrumentalness,liveness,valence,tempo,genre,Cleaned genre,Location
+﻿artist,song,duration_ms,length (Minutes:Seconds),explicit,year,popularity,danceability,energy,key,loudness,mode,speechiness,acousticness,instrumentalness,liveness,valence,tempo,genre,Cleaned genre,Location
 Britney Spears,Oops!...I Did It Again,211160,3.31,FALSE,2000,77,0.751,0.834,1,-5.444,0,0.0437,0.3,1.77E-05,0.355,0.894,95.053,pop,pop,US
 blink-182,All The Small Things,167066,2.47,FALSE,1999,79,0.434,0.897,0,-4.918,1,0.0488,0.0103,0,0.612,0.684,148.726,"rock, pop",rock,US
 Bon Jovi,It's My Life,224493,3.44,FALSE,2000,78,0.551,0.913,0,-4.063,0,0.0466,0.0263,1.35E-05,0.347,0.544,119.992,"rock, metal",rock,US
