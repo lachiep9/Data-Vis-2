@@ -46,16 +46,17 @@
       "mark": {
         "type": "text",
         "align": "left",
-        "dx": 6,
-        "fontSize": 12,
-        "fontStyle": "italic"
+        "dx": -60,
+        "dy": -10,
+        "fontSize": 11,
+        "fontStyle": "italic" 
       },
       "encoding": {
         "text": {"field": "song", "type": "nominal"},
         "color": {"value": "black"},
         "opacity": {
           "condition": {
-            "test": "datum['popularity'] >= 87",
+            "test": "datum['popularity'] >= 86 || datum['popularity'] <= 26",
             "value": 1
           },
           "value": 0

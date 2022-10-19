@@ -1,6 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Though Vega-Lite supports only one scale per axes, one can create a parallel coordinate plot by folding variables, using `joinaggregate` to normalize their values and using ticks and rules to manually create axes.",
     "title": "Properties of Songs",
     "data": {
       "url": "https://raw.githubusercontent.com/lachiep9/Data-Vis-2/main/data/Songs%20Data.csv"
@@ -54,29 +53,36 @@
         "y": {"type": "quantitative", "field": "norm_val", "axis": null},
         "tooltip": [{
           "type": "nominal",
-          "field": "artist"
+          "field": "artist",
+          "title": "Artist"
         }, {
           "type": "nominal",
-          "field": "song"
+          "field": "year",
+          "title": "Year"
+        }, {
+          "type": "nominal",
+          "field": "song",
+          "title": "Song Title"
         }, {
           "type": "quantitative",
-          "field": "popularity"
+          "field": "popularity",
+          "title": "Popularity"
         }, {
           "type": "quantitative",
           "field": "length",
-          "title": "length (minutes)"
+          "title": "Length (minutes:seconds)"
         }, {
           "type": "quantitative",
-          "field": "danceability"
+          "field": "danceability",
+          "title": "Danceability"
         }, {
           "type": "quantitative",
-          "field": "energy"
+          "field": "energy",
+          "title": "Energy"
         }, {
           "type": "quantitative",
-          "field": "loudness"
-        }, {
-          "type": "quantitative",
-          "field": "liveness"
+          "field": "liveness",
+          "title": "Liveness"
         }]
       }
     }, {

@@ -2,9 +2,16 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 700,
   "height": 400,
-  "config":{"background": "aliceblue"},
   "title": "Number of times an Artist ended the year in the Billboard Top 100 (2006-2021)",
-  "projection": {"type": "equalEarth"},
+  "params": [
+    { "name": "zoom", "value": 140,
+      "bind": {"input": "range", "min": 0, "max": 1000, "step": 10} },
+    { "name": "horizontal", "value": 0,
+      "bind": {"input": "range", "min": 0, "max": 360, "step": 1} },
+    { "name": "vertical", "value": 175,
+      "bind": {"input": "range", "min": 0, "max": 360, "step": 1} }
+  ],
+  "projection": {"type": "equalEarth", "scale": {"expr": "zoom"}, "center": {"expr": "[horizontal,vertical]"}},
   "layer": [
     {
       "data": {
@@ -18,7 +25,7 @@
         "url": "https://raw.githubusercontent.com/lachiep9/Data-Vis-2/main/data/Billboard%20artists%20by%20country.csv"
       },
       "mark": {"type": "circle", "color":"green"},
-      "encoding": {          
+      "encoding": {        
         "tooltip": [
       {
         "field": "Country Name", 

@@ -32,11 +32,13 @@
 <div id="symbol_map"></div>
 <div id="bump_chart"></div>
 <div id="bubble_chart"></div>
+<div id="parallel_coordinates"></div>
 
 <script type="text/javascript">
   var spec2 = "js/symbol_map.vg.json";
   var spec3 = "js/bump_chart.vg.json";
   var spec4 = "js/bubble_chart.vg.json";
+  var spec5 = "js/parallel_coordinates_plot.vg.json";
 
   vegaEmbed('#symbol_map', spec2, { "actions": false }).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -47,6 +49,10 @@
   }).catch(console.error);
 
   vegaEmbed('#bubble_chart', spec4, { "actions": false }).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#parallel_coordinates', spec5, { "actions": false }).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
