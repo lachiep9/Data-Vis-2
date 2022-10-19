@@ -1,35 +1,89 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Billboard Ranking",
-  "height": 500,
-  "width": 600,
   "data": {"url": "https://raw.githubusercontent.com/lachiep9/Data-Vis-2/main/data/Billboard%20Rankings.csv"},
-  "transform": [{
-    "sort": [{"field": "Ranking", "order": "ascending"}],
-    "window": [{
-      "op": "rank",
-      "as": "rank"
-    }]
-  }],
-  "mark": {"type": "line", "orient": "vertical","point":true},
-  "encoding": {
-    "x": {"field": "Year", "type": "temporal"},
-    "y": {"field": "Ranking", 
-      "type": "quantitative", 
-      "scale": {
-        "domain": [100, 0]
-      }
-    },
-    "color": {
-      "field": "Artist", "type": "nominal",
-      "scale": {
-        "domain": ["Taylor Swift","Chris Brown","Eminem","Maroon 5","Drake"]
-      }
-    },
-    "tooltip":[
-      {"field": "Year", "type": "temporal", "timeUnit": "year", "title": "Year"},
-      {"field": "Artist"},
-      {"field": "Ranking"}
-    ]
-  }
+  "vconcat": [{
+    "height": 400,
+    "width": 400,
+    "params": [
+    {
+    "name": "Year", 
+    "select": {"type": "interval", "encodings": ["x"]}
+    }],
+    "transform": [
+      {
+      "sort": [{"field": "Ranking", "order": "ascending"}],
+      "window": [{
+        "op": "rank",
+        "as": "rank"
+      }]
+    }],
+    "mark": {"type": "line", "orient": "vertical","point":true},
+    "encoding": {
+      "x": {
+        "field": "Year", 
+        "type": "temporal", 
+        "timeUnit": "year", 
+        "scale": {
+          "domain":{"param": "Yearfilter"}
+          }},
+      "y": {"field": "Ranking", 
+        "type": "quantitative",
+        "axis":{"grid": false}, 
+        "scale": {
+          "domain": [100, 0]
+        }
+      },
+      "color": {
+        "field": "Artist", "type": "nominal",
+        "scale": {
+          "domain": ["Taylor Swift","Chris Brown","Eminem","Maroon 5","Drake"]
+        }
+      },
+      "tooltip":[
+        {"field": "Year", "type": "temporal"},
+        {"field": "Artist"},
+        {"field": "Ranking"}
+      ]
+    }
+  },
+  {
+    "height": 80,
+    "width": 400,
+    "params": [
+      {
+        "name": "Yearfilter", 
+        "select": {"type": "interval", "encodings": ["x"]}
+      }],
+    "transform": [
+      {
+      "sort": [{"field": "Ranking", "order": "ascending"}],
+      "window": [{
+        "op": "rank",
+        "as": "rank"
+      }]
+    }],
+    "mark": {"type": "line", "orient": "vertical","point":true},
+    "encoding": {
+      "x": {"field": "Year", "type": "temporal", "timeUnit":"year","axis":{"grid": false}},
+      "y": {"field": "Ranking", 
+        "type": "quantitative",
+        "axis":{"grid": false}, 
+        "scale": {
+          "domain": [100, 0]
+        }
+      },
+      "color": {
+        "field": "Artist", "type": "nominal",
+        "scale": {
+          "domain": ["Taylor Swift","Chris Brown","Eminem","Maroon 5","Drake"]
+        }
+      },
+      "tooltip":[
+        {"field": "Year", "type": "temporal"},
+        {"field": "Artist"},
+        {"field": "Ranking"}
+      ]
+    }
+  }]
 }

@@ -16,6 +16,11 @@
           "name": "Genre",
           "select": {"type": "point", "fields": ["Cleaned genre"]},
           "bind": "legend"
+        },
+        {
+          "name": "grid",
+          "select": "interval",
+          "bind": "scales"
         }
       ],
       "transform": [{"filter": {"param": "Genre"}}],
