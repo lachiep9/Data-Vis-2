@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Billboard Ranking",
+  "title": "Billboard End of Year Rankings (Best Performing Artists)",
   "data": {"url": "https://raw.githubusercontent.com/lachiep9/Data-Vis-2/main/data/Billboard%20Rankings.csv"},
   "vconcat": [{
     "height": 400,

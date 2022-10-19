@@ -7,7 +7,7 @@
     { "name": "zoom", "value": 140,
       "bind": {"input": "range", "min": 0, "max": 1000, "step": 10} },
     { "name": "horizontal", "value": 0,
-      "bind": {"input": "range", "min": 0, "max": 360, "step": 1} },
+      "bind": {"input": "range", "min": -180, "max": 180, "step": 1} },
     { "name": "vertical", "value": 175,
       "bind": {"input": "range", "min": 0, "max": 360, "step": 1} }
   ],

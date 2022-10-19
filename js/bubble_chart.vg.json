@@ -35,7 +35,8 @@
         "size": {
           "field": "liveness",
           "type": "quantitative",
-          "scale": {"domain":[0,1]}
+          "scale": {"domain":[0,1]},
+          "bin": true
         },
         "tooltip": [
           {"field":"artist"},
