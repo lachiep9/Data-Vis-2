@@ -4,6 +4,7 @@
   "height": 500,
   "width": 600,
   "data": {"url": "https://raw.githubusercontent.com/lachiep9/Data-Vis-2/main/data/Songs%20Data.csv"},
+  "transform": [{"filter":  "datum['Cleaned genre'] == 'pop' || datum['Cleaned genre'] == 'rock' || datum['Cleaned genre'] == 'hip hop'"}],
   "encoding": {
     "x": {"field": "energy", "type": "quantitative"},
     "y": {"field": "popularity", "type": "quantitative"}
