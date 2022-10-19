@@ -46,7 +46,7 @@
         "field": "Cleaned genre", 
         "scale":{
           "domain":["pop","rock","hip hop"],
-          "range":["#5c75ed","red","green"]}},
+          "range":["#5c75ed","#ed3966","#04871a"]}},
         "detail": {"type": "nominal", "field": "song"},
         "opacity": {"value": 0.2},
         "x": {"type": "nominal", "field": "key"},
