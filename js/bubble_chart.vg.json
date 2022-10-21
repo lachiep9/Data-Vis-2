@@ -1,13 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Song Popularity based on Energy (Top 3 Genres)",
-  "height": 500,
-  "width": 600,
+  "height": 400,
+  "background": "#ebd079",
+  "width": "container",
   "data": {"url": "https://raw.githubusercontent.com/lachiep9/Data-Vis-2/main/data/Songs%20Data.csv"},
   "transform": [{"filter":  "datum['Cleaned genre'] == 'pop' || datum['Cleaned genre'] == 'rock' || datum['Cleaned genre'] == 'hip hop'"}],
   "encoding": {
     "x": {"field": "energy", "type": "quantitative"},
-    "y": {"field": "popularity", "type": "quantitative"}
+    "y": {"field": "popularity", "type": "quantitative", "scale": {"domain": [0,95]}}
   },
   "layer":[
     {   
@@ -29,14 +29,21 @@
         "color": {
           "field": "Cleaned genre", 
           "type": "nominal",
-          "legend": {"title": "Genre"},
+          "legend": {
+            "title": "Genre",
+            "offset": 18
+          },
           "scale":{ "domain":["pop","rock","hip hop"], "range":["#5c75ed","#ed3966","#04871a"]}
           },
         "size": {
           "field": "liveness",
           "type": "quantitative",
           "scale": {"domain":[0,1]},
-          "bin": true
+          "bin": true,
+          "title": "Liveness",
+          "legend": {
+            "offset": 18
+            }
         },
         "tooltip": [
           {"field":"artist"},

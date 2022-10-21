@@ -1,10 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Billboard End of Year Rankings (Best Performing Artists)",
+  "title": "Billboard End of Year Rankings",
   "data": {"url": "https://raw.githubusercontent.com/lachiep9/Data-Vis-2/main/data/Billboard%20Rankings.csv"},
+  "background": "#ebd079",
   "vconcat": [{
-    "height": 400,
-    "width": 400,
+    "width":  "container",
+    "height":500,
     "params": [
     {
     "name": "Year", 
@@ -37,19 +38,21 @@
       "color": {
         "field": "Artist", "type": "nominal",
         "scale": {
-          "domain": ["Taylor Swift","Chris Brown","Eminem","Maroon 5","Drake"]
+          "domain": ["Taylor Swift","Chris Brown","Eminem","Maroon 5","Drake"],
+          "range": ["#05c9f5", "#3a5c3d", "#4bc202", "#2c4ef2", "#22f51b"]
         }
       },
       "tooltip":[
         {"field": "Year", "type": "temporal"},
         {"field": "Artist"},
-        {"field": "Ranking"}
+        {"field": "Ranking"},
+        {"field": "Genre"}
       ]
     }
   },
   {
-    "height": 80,
-    "width": 400,
+    "width": "container",
+    "height": 60,
     "params": [
       {
         "name": "Yearfilter", 
@@ -76,14 +79,10 @@
       "color": {
         "field": "Artist", "type": "nominal",
         "scale": {
-          "domain": ["Taylor Swift","Chris Brown","Eminem","Maroon 5","Drake"]
+          "domain": ["Taylor Swift","Chris Brown","Eminem","Maroon 5","Drake"],
+          "range": []
         }
-      },
-      "tooltip":[
-        {"field": "Year", "type": "temporal"},
-        {"field": "Artist"},
-        {"field": "Ranking"}
-      ]
+      }
     }
   }]
 }

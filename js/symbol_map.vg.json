@@ -1,12 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 700,
   "height": 400,
+  "width": "container",
   "title": "Number of times an Artist ended the year in the Billboard Top 100 (2006-2021)",
+  "background": "#ebd079",
   "params": [
-    { "name": "zoom", "value": 140,
-      "bind": {"input": "range", "min": 0, "max": 1000, "step": 10} },
-    { "name": "horizontal", "value": 0,
+    { "name": "zoom", "value": 130,
+      "bind": {"input": "range", "min": 0, "max": 1000, "step": 1} },
+    { "name": "horizontal", "value": 25,
       "bind": {"input": "range", "min": -180, "max": 180, "step": 1} },
     { "name": "vertical", "value": 175,
       "bind": {"input": "range", "min": 0, "max": 360, "step": 1} }
@@ -46,9 +47,9 @@
           "type": "quantitative",
           "scale": {"domain": [0, 20]},
           "legend": {
-            "orient": "top-left",
-            "title": "Per 10 Million Population",
-            "values": [1,10,20,30,40]
+            "title": "Per 10 Million",
+            "values": [1,10,20,30,40],
+            "offset": 18
             }
         }
       }

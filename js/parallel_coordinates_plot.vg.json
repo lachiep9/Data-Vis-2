@@ -1,11 +1,11 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Properties of Songs",
+    "height": 500,
+    "background": "#ebd079",
     "data": {
       "url": "https://raw.githubusercontent.com/lachiep9/Data-Vis-2/main/data/Songs%20Data.csv"
     },
-    "width": 800,
-    "height":400,
+    "width": "container",
     "transform": [
       {"window": [{"op": "count", "as": "index"}]},
       {"fold": ["popularity","length", "danceability", "energy","liveness"]},
@@ -44,6 +44,7 @@
       "encoding": {
         "color": {"type": "nominal", 
         "field": "Cleaned genre", 
+        "title": "Genre",
         "scale":{
           "domain":["pop","rock","hip hop"],
           "range":["#5c75ed","#ed3966","#04871a"]}},
@@ -101,7 +102,7 @@
     }, {
       "encoding": {
         "x": {"type": "nominal", "field": "key"},
-        "y": {"value": 200}
+        "y": {"value": 250}
       },
       "layer": [{
         "mark": {"type": "tick", "style": "tick", "size": 8, "color": "#0c0c0c"}
@@ -109,7 +110,7 @@
     }, {
       "encoding": {
         "x": {"type": "nominal", "field": "key"},
-        "y": {"value": 400}
+        "y": {"value": 500}
       },
       "layer": [{
         "mark": {"type": "text", "style": "label"},
