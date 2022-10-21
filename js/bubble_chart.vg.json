@@ -6,8 +6,8 @@
   "data": {"url": "https://raw.githubusercontent.com/lachiep9/Data-Vis-2/main/data/Songs%20Data.csv"},
   "transform": [{"filter":  "datum['Cleaned genre'] == 'pop' || datum['Cleaned genre'] == 'rock' || datum['Cleaned genre'] == 'hip hop'"}],
   "encoding": {
-    "x": {"field": "energy", "type": "quantitative"},
-    "y": {"field": "popularity", "type": "quantitative", "scale": {"domain": [0,95]}}
+    "x": {"field": "energy", "type": "quantitative", "axis":{"grid": false}},
+    "y": {"field": "popularity", "type": "quantitative", "scale": {"domain": [0,95]},"axis":{"grid": false}}
   },
   "layer":[
     {   
