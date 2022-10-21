@@ -1,5 +1,5 @@
 body *{
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
   }
   
   h1 {
@@ -70,16 +70,23 @@ body *{
 
   .pop {
     color: #5c75ed;
+    font-weight: bold;
   }
 
   .rock {
     color: #ed3966;
+    font-weight: bold;
   }
 
   .hip-hop {
     color: #04871a;
+    font-weight: bold;
   }
 
   div {
     padding-bottom: 20px;
+  }
+
+  .title {
+    font-weight: bold;
   }
