@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "height": 500,
-    "background": "#ebd079",
+    "background": "#e4fce8",
     "data": {
       "url": "https://raw.githubusercontent.com/lachiep9/Data-Vis-2/main/data/Songs%20Data.csv"
     },

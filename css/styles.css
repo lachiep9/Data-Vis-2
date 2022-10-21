@@ -1,16 +1,38 @@
+@font-face {
+    font-family: "Spotify";
+    src: url("fonts/GothamMedium.ttf");
+}
+
+@font-face {
+    font-family: "Spotify";
+    src: url("fonts/GothamBold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Spotify";
+    src: url("fonts/GothamMediumItalic.ttf");
+    font-weight: italic;
+}
+
+@font-face {
+    font-family: "LD Music";
+    src: url("fonts/LD Music.ttf");
+}
+
 body *{
-    font-family: "Open Sans", sans-serif;
+    font-family: "Spotify", sans-serif;
   }
   
   h1 {
     font-weight: 900;
-    font-family:'LD Music';
+    font-family:"LD Music";
     font-size: 100px;
   }
 
   h2 {
     font-weight: 600;
-    font-family:'LD Music';
+    font-family:"LD Music";
     font-size: 40px;
   }
   
@@ -20,7 +42,7 @@ body *{
   
   .page {
     width: 1000px;
-    background-color: rgb(235, 208, 121);
+    background-color: rgb(228, 252, 232);
     margin: auto;
     padding: 30px;
   }

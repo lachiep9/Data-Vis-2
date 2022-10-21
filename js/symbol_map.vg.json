@@ -3,7 +3,7 @@
   "height": 400,
   "width": "container",
   "title": "Number of times an Artist ended the year in the Billboard Top 100 (2006-2021)",
-  "background": "#ebd079",
+  "background": "#e4fce8",
   "params": [
     { "name": "zoom", "value": 130,
       "bind": {"input": "range", "min": 0, "max": 1000, "step": 1} },
