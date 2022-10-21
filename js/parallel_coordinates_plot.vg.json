@@ -75,15 +75,15 @@
         }, {
           "type": "quantitative",
           "field": "danceability",
-          "title": "Danceability"
+          "title": "Danceability", "format": ".3f"
         }, {
           "type": "quantitative",
           "field": "energy",
-          "title": "Energy"
+          "title": "Energy", "format": ".3f"
         }, {
           "type": "quantitative",
           "field": "liveness",
-          "title": "Liveness"
+          "title": "Liveness", "format": ".3f"
         }]
       }
     }, {

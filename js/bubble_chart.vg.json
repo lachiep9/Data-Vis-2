@@ -51,7 +51,7 @@
           {"field":"year"},
           {"field":"Cleaned genre"},
           {"field":"popularity"},
-          {"field": "energy"}
+          {"field": "energy", "format": ".3f"}
         ]
       }
     },

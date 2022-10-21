@@ -19,7 +19,7 @@
         "as": "rank"
       }]
     }],
-    "mark": {"type": "line", "orient": "vertical","point":true},
+    "mark": {"type": "line", "orient": "vertical","point":{"size": 100}, "size": 5},
     "encoding": {
       "x": {
         "field": "Year", 
